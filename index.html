@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>discover the night</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="logo.jpg" type="image/jpg" />
+</head>
+<body>
+
+<div id="preloader">
+  <div class="popup active" id="popup1">
+    <h2>Welcome Ikay</h2>
+    <p>Tonight, the stars have secrets just for you, discover them one by one</p>
+    <button class="nextBtn">Next</button>
+  </div>
+  <div class="popup" id="popup2">
+    <h2>Hint 1</h2>
+    <p>Tap the brightest stars to hear their whispers. Some will make you smile, others will make your heart race.</p>
+    <button class="nextBtn">Next</button>
+  </div>
+  <div class="popup" id="popup3">
+    <h2>Hint 2</h2>
+    <p>The universe is vast, but your heart will find its way through these constellations. Start your adventure!</p>
+    <button class="nextBtn">Start</button>
+  </div>
+</div>
+
+<audio id="starSound" src="click.mp3"></audio>
+
+
+<canvas id="bg"></canvas>
+<canvas id="constCanvas"></canvas>
+<div id="haze"></div>
+
+<div id="infoBox">
+  <div id="infoClose">✕</div>
+  <h3 id="constName">Constellation</h3>
+  <p id="fact">🌟 Fact here</p>
+  <p id="love">💬 Love message here</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
