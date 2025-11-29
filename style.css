@@ -53,6 +53,106 @@ body {
   font-weight:bold;
 }
 
+#letterButton {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  padding: 12px 22px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  color: #eaf0ff;
+  font-size: 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+  z-index: 9999;
+}
+
+#letterButton:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+
+#letterClose {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.hidden-btn {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .5s ease;
+  position: fixed;
+  bottom: 8%;
+  right: 8%;
+  padding: 14px 22px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hidden-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#letterBox {
+  position: fixed;
+  inset: 0; 
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 10000;
+}
+
+#letterBox.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.letter-content {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 28px 32px;
+  border-radius: 16px;
+  width: min(500px, 90%);
+  color: #fff;
+  position: relative;
+  animation: pop 0.35s ease;
+  max-height: 90vh;        
+  overflow-y: auto;         
+}
+
+@keyframes pop {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+#closeLetterBtn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
 canvas { position:absolute; inset:0; display:block; }
 
 #haze { position:absolute; width:100%; height:100%; pointer-events:none; 
@@ -84,3 +184,5 @@ canvas { position:absolute; inset:0; display:block; }
 #infoBox h3 { margin:0 0 8px 0; font-size:1.05rem; color:#ffd9e6; letter-spacing:.5px; }
 #infoBox p { margin:6px 0; font-size:.9rem; line-height:1.3; color:#e9eef8; }
 #infoClose { position:absolute; right:8px; top:8px; font-size:.9rem; opacity:.7; cursor:pointer; }
+
+
